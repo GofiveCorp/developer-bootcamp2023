@@ -19,12 +19,12 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlite(builder.Configuration.GetConnectionString("CodePulseConnectionString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CodePulseConnectionString"));
 });
 
 builder.Services.AddDbContext<AuthDbContext>(options =>
 {
-    options.UseSqlite(builder.Configuration.GetConnectionString("CodePulseConnectionString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CodePulseConnectionString"));
 });
 
 
